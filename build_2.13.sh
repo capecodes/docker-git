@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-GIT_PACKAGE_VERSION="2.13.5-r0"
-IMAGE_VERSION="2.13.5"
-
-./build.sh ${GIT_PACKAGE_VERSION} ${IMAGE_VERSION}
-./push.sh ${IMAGE_VERSION}
