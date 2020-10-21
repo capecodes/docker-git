@@ -12,11 +12,12 @@ RUN addgroup git \
 # add a non-root local users
   && adduser -D git -G git \
 # unlock the users (but dont set a password)
-  && passwd -u git \
-  && mkdir -p /home/git/.ssh
+  && passwd -u git
 
 USER git
 WORKDIR /home/git
+
+RUN mkdir -p /home/git/.ssh
 
 ENV HOME=/home/git
 ENV UID=1000
