@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+GIT_PACKAGE_VERSION="2.29.2-r0"
+OPENSSH_VERSION="8.4_p1-r1"
+IMAGE_VERSION="2.29.2"
+
+./build-edge.sh ${GIT_PACKAGE_VERSION} ${OPENSSH_VERSION} ${IMAGE_VERSION}
+./push.sh ${IMAGE_VERSION}

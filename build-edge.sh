@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+GIT_PACKAGE_VERSION="$1"
+OPENSSH_PACKAGE_VERSION="$2"
+IMAGE_VERSION="$3"
+
+docker build -f Dockerfile.edge --build-arg GIT_PACKAGE_VERSION=${GIT_PACKAGE_VERSION} --build-arg OPENSSH_PACKAGE_VERSION=${OPENSSH_PACKAGE_VERSION} -t capecodes/git:${IMAGE_VERSION} .
